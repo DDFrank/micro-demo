@@ -1,0 +1,2 @@
+micro new --namespace=mu.micro.book --type=srv --alias=auth micro-demo/auth
+protoc --proto_path=. --go_out=. --micro_out=. proto/auth/auth.proto

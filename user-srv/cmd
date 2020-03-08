@@ -1,0 +1,4 @@
+micro new --namespace=mu.micro.book --type=web --alias=user micro-demo/user-web
+./micro --server=grpc --client=grpc --registry=etcd call mu.micro.book.srv.user User.QueryUserByName '{"userName":"micro"}'
+
+protoc --proto_path=. --go_out=. --micro_out=. proto/user/user.proto
